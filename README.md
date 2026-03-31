@@ -1,69 +1,111 @@
-# FloraScan 🌿
+# 🌱 FloraScan
 
-FloraScan is a professional plant care toolkit powered by AI. It uses advanced image recognition to diagnose plant diseases, identify species, and provide expert care recommendations.
+FloraScan is a simple and user-friendly plant analysis web application. It allows users to upload plant images and get insights about plant health, condition, and basic care recommendations.
+
+---
 
 ## 🚀 Features
-- **Smart Diagnostics**: Instant diagnosis of plant issues via photo.
-- **Expert Care System**: Personalized watering, propagation, and treatment advice.
-- **Plant Care Assistant**: Interactive chatbot for any plant-related questions.
-- **Health Scanner**: Fast scanning of plant leaves for early detection of issues.
-- **Mobile Responsive**: Works perfectly on both desktop and mobile devices.
 
-## 🛠️ Technology Stack
-- **Frontend**: HTML5, CSS3 (Modern Glassmorphism Design), JavaScript
-- **Backend**: Node.js (Express)
-- **AI Engine**: Google Gemini 2.0 Flash
+- **Image Upload**: Upload plant images for analysis
+- **Plant Analysis**: Get plant name, health status, and condition
+- **Care Suggestions**: Basic recommendations for plant care
+- **Plant Assistant**: Chatbot for plant-related queries
+- **Responsive Design**: Works on both desktop and mobile devices
+
+---
+
+## ⚠️ Note
+
+This project uses external AI APIs (such as Google Gemini) for plant analysis.
+
+* An API key is required for full functionality
+* Without an API key, some features may not work as expected
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend**: HTML, CSS, JavaScript
+* **Backend**: Node.js (Express)
+* **AI (Optional)**: Google Gemini API
+
+---
 
 ## 📦 Installation & Setup
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/florascan.git
-   cd florascan
-   ```
+1. **Clone the repository**
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Configure Environment Variables**:
-   - Copy `.env.example` to `.env`:
-     ```bash
-     cp .env.example .env
-     ```
-   - Open `.env` and add your **Gemini API Key**.
-   - You can get a free key from [Google AI Studio](https://aistudio.google.com/).
-
-4. **Start the server**:
-   ```bash
-   npm start
-   ```
-   The app will be running at `http://localhost:3000`.
-
-## 📂 Project Structure
-```text
-FloraScan/
-├── public/                 # Frontend assets
-│   ├── css/               # Stylesheets
-│   ├── js/                # Client-side logic
-│   ├── index.html         # Landing page
-│   ├── home.html          # Core features dashboard
-│   ├── health_scanner.html # AI plant scanning
-│   ├── health_diagnosis.html # Detailed diagnosis
-│   └── care_expert.html   # AI care recommendations
-├── server.js               # Node.js backend & AI proxy
-├── .env.example            # Environment variables template
-├── .gitignore             # Git ignore configuration
-├── package.json           # Project dependencies
-└── README.md               # Project documentation
+```bash
+git clone https://github.com/yourusername/florascan.git
+cd florascan
 ```
 
-## 📄 License
-This project is licensed under the ISC License.
+2. **Install dependencies**
 
-## 👨‍🌾 Contributing
-Contributions are welcome! Feel free to open issues or submit pull requests.
+```bash
+npm install
+```
+
+3. **Configure Environment Variables (Optional)**
+
+* Copy `.env.example` to `.env`
+
+```bash
+cp .env.example .env
+```
+
+* Add your API key:
+
+```env
+GEMINI_API_KEY=your_key_here
+```
+
+4. **Run the project**
+
+```bash
+npm start
+```
+
+- Open in browser:
+
+```
+http://localhost:3000
+```
 
 ---
-Made with ❤️ for plant lovers. 🌿
+
+## 📂 Project Structure
+
+```
+FloraScan/
+├── public/
+│   ├── css/
+│   ├── js/
+│   ├── index.html
+│   ├── home.html
+│   ├── health_scanner.html
+│   ├── health_diagnosis.html
+│   └── care_expert.html
+├── server.js
+├── .env.example
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+---
+
+## 👨‍💻 Developed By
+
+* Abhay Pratap Singh
+* Aman Kumar Singh
+
+---
+
+## 📄 License
+
+This project is licensed under the ISC License.
+
+---
+
+🌿 Made for learning and demonstration purposes.
