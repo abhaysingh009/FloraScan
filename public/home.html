@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora-Scan</title>
+    <link rel="icon" type="image/png" href="icon.png">
+
+    
+
+    <!--chat bot css-->
+    
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+<!-- nav bar-->
+ <nav class="navbar">
+    <div class="logo">
+      <span class="logo-icon">🌿</span>
+      FloraScan
+    </div>
+    <div class="nav-buttons">
+        <ul>
+            <li><a href="#" onclick="goToTop(event)">Home</a></li>
+            <li><a href="#" onclick="scrollToHeading()">Features</a></li>
+            <li><a href="#" onclick="comingSoon(event)">About</a></li>
+            <li><a href="#" onclick="comingSoon(event)">Contact Us</a></li>
+
+
+        </ul>
+    </div>
+
+
+    <div class="auth-buttons">
+      <a href="#" class="login" onclick="comingSoon(event)">Login</a>
+      <a href="#" class="signup" onclick="comingSoon(event)">Sign Up</a>
+    </div>
+  </nav>
+
+  
+   
+   
+  </div>
+    <!-- Header Section -->
+    <section class="header">
+        <div class="container">
+            <div class="badge">🔧 Professional Tools</div>
+            <h1>Smart Plant Care<span class="highlight">Toolkit</span></h1>
+            <p>Professional-grade tools designed to help you grow healthier plants and maximize your harvest! 🌱</p>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section">
+        <div class="container">
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="difficulty-badge easy">Easy</div>
+                    <div class="tool-icon fertilizer">🧪</div>
+                    <h3>Fertilizer Calculator</h3>
+                    <p>Calculate optimal fertilizer amounts for maximum growth</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="difficulty-badge expert">Expert</div>
+                    <div class="tool-icon pests">💡</div>
+                    <h3>Pests & Diseases</h3>
+                    <p>Identify and treat plant problems instantly</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="difficulty-badge medium">Medium</div>
+                    <div class="tool-icon cultivation">☀</div>
+                    <h3>Cultivation Tips</h3>
+                    <p>Learn proper growing techniques from experts</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="difficulty-badge advanced">Advanced</div>
+                    <div class="tool-icon disease">⚠</div>
+                    <h3>Disease Alert</h3>
+                    <p>Early warning system for plant health issues</p>
+                </div>
+                <div class="tool-card">
+                    <div class="difficulty-badge advAi">Advanced</div>
+                    <div class="tool-icon processor">🧠</div>
+                    <h3>Smart Diagnostics</h3>
+                    <p>Advanced recognition technology identifies diseases, pests and nutrient deficiencies</p>
+                </div>
+                <div class="tool-card">
+                    <div class="difficulty-badge advRealtime">Expert</div>
+                    <div class="tool-icon diagnostics">⚡</div>
+                    <h3>Real-Time Monitoring</h3>
+                    <p>Track crop health ,weather patterns ,soil conditions and irrigation levels</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-badge">🔍 How It Works</div>
+                <h2>Heal Your Crop in<span class="highlight"> 4 Simple Steps</span></h2>
+                <p>Our advanced processing technology makes plant care accessible to everyone, from beginners to experts! 🌺</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon camera">📸</div>
+                    <h3>Take a picture</h3>
+                    <p>Capture your plant issues instantly</p>
+                    <ul class="step-features">
+                        <li>Take clear, well-lit photos</li>
+                        <li>Focus on affected areas</li>
+                        <li>Multiple angles help diagnosis</li>
+                        <li>Include leaves and stems</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon search">🔍</div>
+                    <h3>See diagnosis</h3>
+                    <p>Expert plant health analysis</p>
+                    <ul class="step-features">
+                        <li>Get instant results</li>
+                        <li>View detailed explanations</li>
+                        <li>Learn about diseases</li>
+                        <li>Understand symptoms</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon medicine">🍃</div>
+                    <h3>Get medicine</h3>
+                    <p>Receive treatment recommendations</p>
+                    <ul class="step-features">
+                        <li>Follow treatment plans</li>
+                        <li>Use recommended products</li>
+                        <li>Monitor progress</li>
+                        <li>Prevent future issues</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon track">📈</div>
+                    <h3>Track Progress</h3>
+                    <p>Monitor your plant's recovery</p>
+                    <ul class="step-features">
+                        <li>Regular check-ups</li>
+                        <li>Photo comparisons</li>
+                        <li>Treatment effectiveness</li>
+                        <li>Long-term health</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Plants Section -->
+    <section class="popular-plants">
+        <div class="container">
+            <div class="section-title" style="color: #2c3e50;">
+                <div class="section-badge" style="background: rgba(46, 204, 113, 0.2); color: #27ae60; border: 1px solid rgba(46, 204, 113, 0.3);">🌱 Popular Crops</div>
+                <h2>Most Loved<span style="background: linear-gradient(45deg, #2ecc71, #27ae60); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Plants</span></h2>
+                <p style="color: #7f8c8d;">Discover the most popular crops and learn professional care techniques for optimal growth! 🌿</p>
+            </div>
+
+            <div class="plants-grid">
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon" style="background: linear-gradient(45deg, #2ecc71, #27ae60);">🥒</div>
+                        <div class="plant-stats">
+                            <div class="popularity">❤ 95%</div>
+                            <div class="season-badge summer">Summer</div>
+                        </div>
+                    </div>
+                    <h3>Cucumber</h3>
+                    <p>Regular watering, full sun, well-drained soil</p>
+                    <div class="plant-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon" style="background: linear-gradient(45deg, #27ae60, #2ecc71);">🥬</div>
+                        <div class="plant-stats">
+                            <div class="popularity">❤ 78%</div>
+                            <div class="season-badge spring">Spring</div>
+                        </div>
+                    </div>
+                    <h3>Celery</h3>
+                    <p>Consistent moisture, partial shade, rich soil</p>
+                    <div class="plant-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star empty">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon" style="background: linear-gradient(45deg, #f39c12, #e67e22);">🫚</div>
+                        <div class="plant-stats">
+                            <div class="popularity">❤ 85%</div>
+                            <div class="season-badge year-round">Year-round</div>
+                        </div>
+                    </div>
+                    <h3>Ginger</h3>
+                    <p>Warm climate, indirect light, moist soil</p>
+                    <div class="plant-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon" style="background: linear-gradient(45deg, #f1c40f, #f39c12);">🌾</div>
+                        <div class="plant-stats">
+                            <div class="popularity">❤ 92%</div>
+                            <div class="season-badge winter">Winter</div>
+                        </div>
+                    </div>
+                    <h3>Wheat</h3>
+                    <p>Full sun, moderate water, fertile soil</p>
+                    <div class="plant-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon" style="background: linear-gradient(45deg, #e74c3c, #c0392b);">🍅</div>
+                        <div class="plant-stats">
+                            <div class="popularity">❤ 98%</div>
+                            <div class="season-badge summer">Summer</div>
+                        </div>
+                    </div>
+                    <h3>Tomato</h3>
+                    <p>Full sun, regular watering, support stakes</p>
+                    <div class="plant-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon" style="background: linear-gradient(45deg, #2ecc71, #27ae60);">🥬</div>
+                        <div class="plant-stats">
+                            <div class="popularity">❤ 88%</div>
+                            <div class="season-badge spring-fall">Spring/Fall</div>
+                        </div>
+                    </div>
+                    <h3>Lettuce</h3>
+                    <p>Cool weather, partial shade, frequent watering</p>
+                    <div class="plant-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="main-features">
+        <div class="container" >
+            <div class="cta-content">
+                <h2 >Start Your Plant Care Journey Today! 🚀</h2>
+                <p>Join thousands of successful gardeners using FloraScan</p>
+
+                <div class="features-grid">
+                    <a class="Scanner1" href="health_scanner.html">
+                    <div class="feature-card">
+                        <div class="feature-icon">📸</div>
+                        <div class="scannerbutton">
+                        <h3>Instant Diagnosis ⚡</h3>
+                        </div>
+                        <p>Take a photo and get plant health analysis in seconds.</p>
+                        
+                    </div>
+                    </a>
+
+                    
+                    <a class="Scanner1" href="care_expert.html"><div class="feature-card">
+                        <div class="feature-icon">🌱</div>
+                        <h3>Professional Care Tips 🌟</h3>
+                        <p>Access specialized growing advice tailored to your specific plants.</p>
+                    </div>
+                    </a>
+
+                    <a class="Scanner1" href="health_diagnosis.html"><div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <h3>Track Growth 📊</h3>
+                        <p>Monitor your plants' progress and optimize your growing strategy.</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <div style="font-size: 2rem;">🌱</div>
+                <h3>FloraScan</h3>
+            </div>
+            <p class="footer-tagline">Your smart companion for plant health and crop management. 🌿</p>
+            
+            <div class="footer-nav">
+                <a href="#about" onclick="comingSoon(event)">About</a>
+                <a href="#features" onclick="comingSoon(event)">Features</a>
+                <a href="#pricing" onclick="comingSoon(event)">Pricing</a>
+                <a href="#contact" onclick="comingSoon(event)">Contact</a>
+            </div>
+
+            <div class="footer-bottom">
+                © 2024 FloraScan. All rights reserved. Made with ❤ for plant lovers.
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Widget -->
+<div class="chatbot-widget">
+ <!-- Bot Icon -->
+ <div id="assist-text">How can I assist you?</div>
+ <button id="chatbot-toggle">
+    <img src="https://img.icons8.com/ios/50/ffffff/bot.png" alt="Chat">
+ </button>
+
+ <!-- Chatbot Container -->
+ <div id="chatbot-container">
+   <div class="chat-header">
+     <div class="chat-title">
+       <h3>🌱 Plant Care Assistant</h3>
+     </div>
+   </div>
+   <div id="chat"></div>
+   <div id="chatbot-footer">
+     <input type="text" id="userInput" placeholder="Ask about your plant..." />
+     <button class="send-btn" onclick="sendMessage()">Send</button>
+   </div>
+ </div>
+</div>
+
+   
+    <!--chat bot js-->
+    
+  <script src="js/home.js"></script>
+</body>
+</html>

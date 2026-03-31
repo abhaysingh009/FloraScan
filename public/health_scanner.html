@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flora-Scan</title>
+    <link rel="icon" type="image/png" href="icon.png">
+
+  
+  <link rel="stylesheet" href="css/health_scanner.css">
+</head>
+<body>
+
+  <a class="nav home" href="home.html">Previous</a>
+
+  <h1>🌿 Plant Health Scanner</h1>
+
+  <div class="container">
+    <div class="controls">
+      <h3 style="margin-bottom: 20px;">📸 Capture or Upload</h3>
+      <button id="startCam">📸 Start Camera</button>
+      <video id="video" autoplay playsinline style="display:none;"></video>
+      <button id="captureBtn" style="display:none;">📸 Capture Photo</button>
+      
+      <div class="file-upload-container">
+        <input type="file" accept="image/*" id="upload" />
+        <div class="file-upload-button">
+          <div class="file-manager-icon">📁</div>
+          <div class="file-upload-text">Browse Files</div>
+        </div>
+      </div>
+      
+      <canvas id="canvas"></canvas>
+      <button id="sendToGemini">🔍 Analyze Plant</button>
+    </div>
+
+    <div class="preview-section">
+      <h3 style="margin-bottom: 20px;">🖼️ Image Preview</h3>
+      
+      <!-- Drag & Drop Zone -->
+      <div class="drop-zone" id="dropZone">
+        <div class="drop-zone-content">
+          <div class="drop-zone-icon">🖼️</div>
+          <div class="drop-zone-text">
+            Drag & drop an image here
+            <div class="drop-zone-subtext">or click to select an image</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hidden file input for drop zone -->
+      <input type="file" accept="image/*" id="dropUpload" style="display: none;" />
+      
+      <img id="preview" class="image-preview" alt="Preview" />
+      
+      <!-- Drag overlay for visual feedback -->
+      <div class="drag-overlay" id="dragOverlay">
+        📤 Drop image here!
+      </div>
+    </div>
+  </div>
+
+  <div class="output glass" id="output">
+    <div class="output-header">
+      <div class="output-title">📋 Analysis Results...</div>
+    </div>
+    <div id="outputText">Upload or capture a plant image to get started...</div>
+    <button class="speaker-btn" id="speakBtn" style="display:none;" title="Read aloud">
+      🔊 Read Results
+    </button>
+  </div>
+  
+
+  <script src="js/health_scanner.js"></script>
+</body>
+</html>

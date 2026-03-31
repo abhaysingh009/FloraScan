@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora-Scan</title>
+    <link rel="icon" type="image/png" href="icon.png">
+
+    
+  <link rel="stylesheet" href="css/health_diagnosis.css">
+</head>
+<body>
+     <div class="nav">
+    <ul>
+      <li><a class="home" href="home.html">Previous</a></li>
+    </ul>
+    <h1>🌿 Plant Health Diagnosis</h1>
+  </div>
+    <div class="container">
+        <div class="header">
+           
+            <h3>Plant health analysis through precise visual techniques and expert evaluation.</h3>
+        </div>
+        
+        <div class="main-content">
+            <div class="input-section">
+                <h2 class="section-title">📸 Capture or Upload Image</h2>
+                
+                <div class="button-group">
+                    <button id="startCam" class="btn">
+                        📷 Start Camera
+                    </button>
+                    <button id="captureBtn" class="btn" style="display: none;">
+                        📸 Capture Photo
+                    </button>
+                </div>
+
+                <div class="upload-area" onclick="document.getElementById('upload').click()">
+                    <div class="upload-icon">📁</div>
+                    <p><strong>Click to upload an image</strong></p>
+                    <p>or drag and drop your plant photo here</p>
+                    <input type="file" id="upload" accept="image/*">
+                </div>
+
+                <div class="video-container">
+                    <video id="video" autoplay playsinline></video>
+                </div>
+
+                <div class="preview-container">
+                    <img id="preview" alt="Preview">
+                </div>
+
+                <div class="feature-highlight">
+                    <strong>🔬 Analysis Features:</strong>
+                    <br>• Plant species identification
+                    <br>• Disease and pest detection
+                    <br>• Nutrient deficiency analysis
+                    <br>• Growth stage assessment
+                </div>
+
+                <button id="sendToGemini" class="btn" style="width: 100%; margin-top: 20px;">
+                    🔍 Analyze Plant Health
+                </button>
+            </div>
+
+            <div class="output-section">
+                <h2 class="section-title">📋 Diagnosis Results</h2>
+                <div id="output" class="output-area">
+                    <span class="status-indicator status-ready"></span>Ready to analyze your plant image...
+                    
+                    <div style="margin-top: 20px; color: #666;">
+                        <strong>How it works:</strong>
+                        <br>1. Capture or upload a clear photo of your plant
+                        <br>2. Click "Analyze Plant Health" 
+                        <br>3. Get detailed processing results and recommendations
+                        <br><br>
+                        <em>💡 Tip: Take photos in good lighting with the plant clearly visible for best results!</em>
+                    </div>
+                </div>
+                <div class="output-controls">
+                    <button class=" btn speaker-btn" id="speakBtn" style="display:none;" title="Read diagnosis aloud">
+                        🔊 Read Recommendations
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="canvas" style="display: none;"></canvas>
+
+    
+  <script src="js/health_diagnosis.js"></script>
+</body>
+</html>

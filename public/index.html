@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flora-Scan</title>
+    <link rel="icon" type="image/png" href="icon.png">
+
+    
+    <link rel="stylesheet" href="css/index.css">
+</head>
+  <body>
+    <!-- Landing Page -->
+    <div
+      class="page landing-page active"
+      id="landing"
+      role="main"
+      aria-label="Landing page"
+    >
+      <div class="bg-container" aria-hidden="true">
+        <div class="moving-bg"></div>
+        <div class="bg-overlay"></div>
+      </div>
+      <div class="content">
+        <div class="logo" aria-label="PlantLife logo with plant emoji">
+          Flora<span>Scan</span
+          ><span class="plant-emoji" aria-hidden="true">🌱</span>
+        </div>
+        <div class="cta-container">
+          <button
+            class="cta-button"
+            type="button"
+            aria-describedby="startDesc"
+            onclick="goToPage('plants-location')"
+          >
+            <svg
+              class="water-drop-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <defs>
+                <linearGradient
+                  id="dropFill"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#9CE0FF" />
+                  <stop offset="60%" stop-color="#6ECBFF" />
+                  <stop offset="100%" stop-color="#4DB7F3" />
+                </linearGradient>
+                <radialGradient
+                  id="dropHighlight"
+                  cx="30%"
+                  cy="30%"
+                  r="50%"
+                  fx="20%"
+                  fy="20%"
+                >
+                  <stop offset="0%" stop-color="white" stop-opacity="0.8" />
+                  <stop offset="100%" stop-color="white" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <path
+                d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"
+                fill="url(#dropFill)"
+                stroke="#4DB7F3"
+                stroke-width="1"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 3.5l5 5.0a7.2 7.2 0 1 1-10 0z"
+                fill="url(#dropHighlight)"
+                stroke="none"
+              />
+              <circle cx="9.5" cy="9" r="1.5" fill="white" fill-opacity="0.5" />
+              <ellipse
+                cx="12"
+                cy="15"
+                rx="4"
+                ry="2"
+                fill="white"
+                fill-opacity="0.2"
+              />
+            </svg>
+            Get Started with Your Plant
+          </button>
+          <div>
+            <a
+              href="#"
+              class="login-link"
+              role="link"
+              tabindex="0"
+              onclick="goToPage('login')"
+              >Already a Member? Sign in here</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Where are your plants? -->
+    <div
+      class="page question-page background1"
+      id="plants-location"
+      role="main"
+      aria-label="Where are your plants?"
+    >
+      <button
+        class="back-button"
+        type="button"
+        aria-label="Back to landing page"
+        onclick="goToPage('landing')"
+      >
+        &#8249;
+      </button>
+      <div class="question-content">
+        <h1 class="question-title moving-Question">Where are your Plants?</h1>
+        <p class="question-subtitle">You can pick multiple options</p>
+
+        <div
+          class="options-container"
+          role="group"
+          aria-multiselectable="true"
+          aria-label="Plant location options"
+        >
+          <div
+            class="option"
+            tabindex="0"
+            role="checkbox"
+            aria-checked="false"
+            onclick="toggleOption(this)"
+            onkeydown="optionKeyDown(event, this)"
+          >
+            <div class="option-icon" aria-hidden="true">🏠</div>
+            <div class="option-text">
+              <div class="option-title">Potted Plants Indoor</div>
+            </div>
+            <div class="radio-circle"></div>
+          </div>
+
+          <div
+            class="option"
+            tabindex="0"
+            role="checkbox"
+            aria-checked="false"
+            onclick="toggleOption(this)"
+            onkeydown="optionKeyDown(event, this)"
+          >
+            <div class="option-icon" aria-hidden="true">🪴</div>
+            <div class="option-text">
+              <div class="option-title">Potted Plants Outdoor</div>
+            </div>
+            <div class="radio-circle"></div>
+          </div>
+
+          <div
+            class="option"
+            tabindex="0"
+            role="checkbox"
+            aria-checked="false"
+            onclick="toggleOption(this)"
+            onkeydown="optionKeyDown(event, this)"
+          >
+            <div class="option-icon" aria-hidden="true">🌳</div>
+            <div class="option-text">
+              <div class="option-title">Garden, Plants in Ground</div>
+            </div>
+            <div class="radio-circle"></div>
+          </div>
+        </div>
+
+        <div class="navigation-buttons">
+          <button
+            class="nav-button skip-button"
+            type="button"
+            onclick="goToPage('help-options')"
+          >
+            Skip
+          </button>
+          <button
+            class="nav-button next-button"
+            type="button"
+            onclick="goToPage('help-options')"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- What can we help you with? -->
+    <div
+      class="page question-page"
+      id="help-options"
+      role="main"
+      aria-label="What can we help you with?"
+    >
+      <button
+        class="back-button"
+        type="button"
+        aria-label="Back to plants location"
+        onclick="goToPage('plants-location')"
+      >
+        &#8249;
+      </button>
+      <div class="question-content">
+        <h1 class="question-title moving-Question">
+          What can we help you with?
+        </h1>
+        <p class="question-subtitle">You can pick multiple options</p>
+
+        <div
+          class="options-container"
+          role="group"
+          aria-multiselectable="true"
+          aria-label="Help options"
+        >
+          <div
+            class="option"
+            tabindex="0"
+            role="checkbox"
+            aria-checked="false"
+            onclick="toggleOption(this)"
+            onkeydown="optionKeyDown(event, this)"
+          >
+            <div class="option-icon" aria-hidden="true">🩺</div>
+            <div class="option-text">
+              <div class="option-title">Get help with a sick plant</div>
+            </div>
+            <div class="radio-circle"></div>
+          </div>
+
+          <div
+            class="option"
+            tabindex="0"
+            role="checkbox"
+            aria-checked="false"
+            onclick="toggleOption(this)"
+            onkeydown="optionKeyDown(event, this)"
+          >
+            <div class="option-icon" aria-hidden="true">💧</div>
+            <div class="option-text">
+              <div class="option-title">Get water and care reminders</div>
+            </div>
+            <div class="radio-circle"></div>
+          </div>
+
+          <div
+            class="option"
+            tabindex="0"
+            role="checkbox"
+            aria-checked="false"
+            onclick="toggleOption(this)"
+            onkeydown="optionKeyDown(event, this)"
+          >
+            <div class="option-icon" aria-hidden="true">🔍</div>
+            <div class="option-text">
+              <div class="option-title">Identify a plant</div>
+            </div>
+            <div class="radio-circle"></div>
+          </div>
+
+          <div
+            class="option"
+            tabindex="0"
+            role="checkbox"
+            aria-checked="false"
+            onclick="toggleOption(this)"
+            onkeydown="optionKeyDown(event, this)"
+          >
+            <div class="option-icon" aria-hidden="true">📝</div>
+            <div class="option-text">
+              <div class="option-title">Plant organization & journal</div>
+            </div>
+            <div class="radio-circle"></div>
+          </div>
+
+          <div
+            class="option"
+            tabindex="0"
+            role="checkbox"
+            aria-checked="false"
+            onclick="toggleOption(this)"
+            onkeydown="optionKeyDown(event, this)"
+          >
+            <div class="option-icon" aria-hidden="true">⋯</div>
+            <div class="option-text">
+              <div class="option-title">Something else</div>
+            </div>
+            <div class="radio-circle"></div>
+          </div>
+        </div>
+
+        <div class="navigation-buttons">
+          <button
+            class="nav-button skip-button"
+            type="button"
+            onclick="goToPage('interest-level')"
+          >
+            Skip
+          </button>
+          <button
+            class="nav-button next-button"
+            type="button"
+            onclick="goToPage('interest-level')"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- How interested are you in plant care? -->
+    <div
+      class="page question-page"
+      id="interest-level"
+      role="main"
+      aria-label="Interest in plant care level"
+    >
+      <button
+        class="back-button"
+        type="button"
+        aria-label="Back to help options"
+        onclick="goToPage('help-options')"
+      >
+        &#8249;
+      </button>
+      <div class="question-content">
+        <h1 class="question-title moving-Question">
+          How interested are you in plant care?
+        </h1>
+
+        <div
+          class="options-container"
+          role="radiogroup"
+          aria-label="Interest level"
+        >
+          <div
+            class="interest-option"
+            tabindex="0"
+            role="radio"
+            aria-checked="false"
+            onclick="selectSingleOption(this, 'interest-level')"
+            onkeydown="interestOptionKeyDown(event, this)"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1463320726281-696a485928c7?w=400&h=400&fit=crop&crop=center"
+              alt="Low maintenance plants"
+              class="interest-image"
+              draggable="false"
+            />
+            <div class="interest-content">
+              <div class="interest-title">Low</div>
+              <div class="interest-description">
+                I just want to keep my plants alive
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="interest-option"
+            tabindex="0"
+            role="radio"
+            aria-checked="false"
+            onclick="selectSingleOption(this, 'interest-level')"
+            onkeydown="interestOptionKeyDown(event, this)"
+          >
+            <img
+              src="https://crateandbasket.com/wp-content/uploads/2022/10/Watering-Jalapeno-growing-plant-with-water-at-home-on-windowsill-ss221014-1024x597.jpg.webp"
+              alt="Medium plant care"
+              class="interest-image"
+              draggable="false"
+            />
+            <div class="interest-content">
+              <div class="interest-title">Medium</div>
+              <div class="interest-description">
+                I like plant care and I'm alright with spending time on my
+                plants
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="interest-option"
+            tabindex="0"
+            role="radio"
+            aria-checked="false"
+            onclick="selectSingleOption(this, 'interest-level')"
+            onkeydown="interestOptionKeyDown(event, this)"
+          >
+            <img
+              src="https://pinchofseeds.com/wp-content/uploads/2023/03/when-to-apply-5-10-10-Fertilizer-768x402.jpg"
+              class="interest-image"
+              draggable="false"
+            />
+            <div class="interest-content">
+              <div class="interest-title">High</div>
+              <div class="interest-description">
+                I live for plants. I want to spend every waking hour on them
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navigation-buttons">
+          <button
+            class="nav-button skip-button"
+            type="button"
+            onclick="goToPage('location')"
+          >
+            Skip
+          </button>
+          <button
+            class="nav-button next-button"
+            type="button"
+            onclick="goToPage('location')"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Where are you and your plants located? -->
+    <div
+      class="page question-page"
+      id="location"
+      role="main"
+      aria-label="Location information"
+    >
+      <button
+        class="back-button"
+        type="button"
+        aria-label="Back to interest level"
+        onclick="goToPage('interest-level')"
+      >
+        &#8249;
+      </button>
+      <div class="question-content">
+        <h1 class="question-title moving-Question">
+          Where are you and your plants located?
+        </h1>
+        <p class="question-subtitle">Your location will only be used to:</p>
+
+        <div class="location-features">
+          <div class="location-feature">
+            <div class="feature-icon" aria-hidden="true">📍</div>
+            <div class="option-text">
+              <div class="option-title">
+                Recommend plants suitable for your area
+              </div>
+            </div>
+          </div>
+
+          <div class="location-feature">
+            <div class="feature-icon" aria-hidden="true">☀</div>
+            <div class="option-text">
+              <div class="option-title">Provide weather-based care tips</div>
+            </div>
+          </div>
+
+          <div class="location-feature">
+            <div class="feature-icon" aria-hidden="true">🌡</div>
+            <div class="option-text">
+              <div class="option-title">
+                Adjust care schedules based on local climate
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="location-button"
+          type="button"
+          onclick="requestLocation()"
+        >
+          Share My Location
+        </button>
+
+        <div class="navigation-buttons">
+          <a
+            class="loc"
+            href="home.html"
+            ><button class="nav-button skip-button" type="button">
+              Skip for Now
+            </button>
+
+            <button
+              class="nav-button next-button"
+              type="button"
+              onclick="goToPage('landing')"
+            >
+              Continue
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Page -->
+    <div
+      class="page question-page"
+      id="login"
+      role="main"
+      aria-label="Login page"
+    >
+      <button
+        class="back-button"
+        type="button"
+        aria-label="Back to landing page"
+        onclick="goToPage('landing')"
+      >
+        &#8249;
+      </button>
+      <div class="login-content">
+        <h1 class="login-title">Welcome Back!</h1>
+        <p class="login-subtitle">
+          Sign in to continue your plant care journey
+        </p>
+
+        <div class="login-buttons">
+          <button
+            class="login-button apple-button"
+            type="button"
+            aria-label="Continue with Apple"
+          >
+            <span class="button-icon" aria-hidden="true"></span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              style="margin-right: 8px"
+            >
+              <path
+                d="M13.545 10.693c-.228.524-.498.99-.809 1.398-.428.567-.78.961-1.06 1.18-.424.348-.878.525-1.36.53-.348 0-.768-.1-1.258-.298-.492-.199-.944-.298-1.355-.298-.438 0-.908.1-1.41.298-.5.198-.891.298-1.17.298-.498-.007-.96-.182-1.383-.522-.318-.252-.686-.66-1.105-1.227-.476-.629-.873-1.356-1.188-2.18-.33-.859-.493-1.688-.49-2.485.007-1.002.225-1.875.654-2.62.444-.77 1.035-1.376 1.773-1.818.558-.34 1.153-.512 1.785-.516.352 0 .815.105 1.388.317.571.211.935.317 1.09.317.115 0 .514-.123 1.198-.367.643-.225 1.184-.32 1.623-.287 1.2.096 2.1.585 2.695 1.465-1.07.638-1.599 1.531-1.585 2.68.013.892.34 1.641.981 2.247.29.27.613.482.97.635-.077.227-.16.447-.247.662zM10.45 1.293c0 .716-.266 1.378-.796 1.985-.637.727-1.41 1.145-2.187 1.078a2.366 2.366 0 01-.018-.29c0-.695.302-1.436.832-2.045.265-.3.598-.548.996-.742.397-.192.763-.296 1.098-.31.032.107.048.22.048.33z"
+              />
+            </svg>
+            Continue with Apple
+          </button>
+
+          <button
+            class="login-button google-button"
+            type="button"
+            aria-label="Continue with Google"
+          >
+            <span class="button-icon" aria-hidden="true"></span>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="25"
+              height="25"
+              viewBox="0 0 48 48"
+            >
+              <path
+                fill="#FFC107"
+                d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
+              ></path>
+              <path
+                fill="#FF3D00"
+                d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
+              ></path>
+              <path
+                fill="#4CAF50"
+                d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
+              ></path>
+              <path
+                fill="#1976D2"
+                d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+              ></path>
+            </svg>
+
+            Continue with Google
+          </button>
+
+          <button
+            class="login-button email-button"
+            type="button"
+            aria-label="Continue with Email"
+          >
+            <span class="button-icon" aria-hidden="true"></span>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="30"
+              height="30"
+              viewBox="0 0 48 48"
+            >
+              <path
+                fill="#4caf50"
+                d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"
+              ></path>
+              <path
+                fill="#1e88e5"
+                d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"
+              ></path>
+              <polygon
+                fill="#e53935"
+                points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"
+              ></polygon>
+              <path
+                fill="#c62828"
+                d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"
+              ></path>
+              <path
+                fill="#fbc02d"
+                d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"
+              ></path>
+            </svg>
+
+            Continue with Email
+          </button>
+        </div>
+         <div>
+            <a
+              href="#"
+              class="login-link "
+              
+              >Not a Member? Sign Up here</a
+            >
+          </div>
+
+        <div class="rating-section" aria-label="App rating">
+          <div>
+            <a
+              class="loc"
+              href="home.html"
+              <
+            >
+              <button
+                class="nav-button skip-button"
+                type="button"
+                onclick="goToPage('landing')"
+              >
+                Skip for Now
+              </button>
+              <button
+                class="nav-button next-button"
+                type="button"
+                onclick="goToPage('location')"
+              >
+                Next
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <p class="terms-text">
+          By continuing, you agree to our
+          <a href="#" class="terms-link" role="link" tabindex="0"
+            >Terms of Service</a
+          >
+          and
+          <a href="#" class="terms-link" role="link" tabindex="0"
+            >Privacy Policy</a
+          >
+        </p>
+      </div>
+    </div>
+
+    
+    <script src="js/index.js"></script>
+</body>
+</html>
