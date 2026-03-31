@@ -13,7 +13,7 @@ FloraScan is a simple and user-friendly plant analysis web application. It allow
 - **Responsive Design**: Works on both desktop and mobile devices
 <img width="500" height="550" alt="Screenshot 2025-06-12 213811" src="https://github.com/user-attachments/assets/ab2ace1a-e841-4be7-9ac5-b6b8d4491273" />
 <img width="500" height="550" alt="Screenshot 2025-06-12 213711" src="https://github.com/user-attachments/assets/9d28589c-4193-4863-82fa-80c27e4342d1" />
-<img width="500" height="550" alt="Screenshot 2026-03-31 061228" src="https://github.com/user-attachments/assets/80c2f5c7-4cd9-4513-b5cb-a881562b8575" />
+<!-- <img width="500" height="550" alt="Screenshot 2026-03-31 061228" src="https://github.com/user-attachments/assets/80c2f5c7-4cd9-4513-b5cb-a881562b8575" /> -->
 <img width="500" height="550" alt="Screenshot 2026-03-31 061137" src="https://github.com/user-attachments/assets/ee290afa-3b40-4cc4-87c3-2e17ca1ccc04" />
 <img width="500" height="550" alt="Screenshot 2026-03-31 060555" src="https://github.com/user-attachments/assets/c4d49a29-2f26-433b-8e83-db8d7a70e508" />
 <img width="500" height="550" alt="Screenshot 2026-03-31 060113" src="https://github.com/user-attachments/assets/09ceb6ec-8bf4-49a4-b79a-38d027d824f1" />
