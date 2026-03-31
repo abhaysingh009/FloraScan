@@ -16,7 +16,7 @@ FloraScan is a simple and user-friendly plant analysis web application. It allow
 
 ## ⚠️ Note
 
-This project uses external AI APIs (such as Google Gemini) for plant analysis.
+This project uses external AI APIs for plant analysis.
 
 * An API key is required for full functionality
 * Without an API key, some features may not work as expected
@@ -26,8 +26,7 @@ This project uses external AI APIs (such as Google Gemini) for plant analysis.
 ## 🛠️ Tech Stack
 
 * **Frontend**: HTML, CSS, JavaScript
-* **Backend**: Node.js (Express)
-* **AI (Optional)**: Google Gemini API
+* **Backend**: Node.js ,Express.js,API integration
 
 ---
 
@@ -57,7 +56,7 @@ cp .env.example .env
 * Add your API key:
 
 ```env
-GEMINI_API_KEY=your_key_here
+API_KEY=your_key
 ```
 
 4. **Run the project**
@@ -104,7 +103,7 @@ FloraScan/
 
 ## 📄 License
 
-This project is licensed under the ISC License.
+This project is licensed under the MIT License.
 
 ---
 
